@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Courses</h1>
+
+<%= link_to new_course_path, class:"btn-floating btn-large waves-effect waves-light red" do %>
+  <i class="material-icons">add</i>
+<% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= link_to course.title, course %></td>
+        <td>
+         <%= link_to edit_course_path(course) do %>
+         <i class="material-icons">edit</i>
+         <%end %>
+         <%= link_to course, method: :delete, data: { confirm: 'Are you sure?' } do %>          
+         <i class="material-icons">delete</i>
+         <%end %>
+        </td>
+       </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
