@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Xxxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Video</th>
+      <th>Title</th>
+      <th>Star</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @xxxes.each do |xxx| %>
+      <tr>
+        <td><%= xxx.image %></td>
+        <td><%= xxx.video %></td>
+        <td><%= xxx.title %></td>
+        <td><%= xxx.star %></td>
+        <td><%= xxx.description %></td>
+        <td><%= link_to 'Show', xxx %></td>
+        <td><%= link_to 'Edit', edit_xxx_path(xxx) %></td>
+        <td><%= link_to 'Destroy', xxx, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Xxx', new_xxx_path %>

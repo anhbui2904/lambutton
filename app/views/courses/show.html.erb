@@ -1,29 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col m12">
+    <div class="card blue-grey darken-1">
+        <div class="card-image">
+         <iframe src="//fast.wistia.net/embed/iframe/#{#course.video}" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="100%" height="349"></iframe>
+        <script src="//fast.wistia.net/assets/external/E-v1.js" async></script> 
+        </div>
 
-<p>
-  <strong>Image:</strong>
-  <%= @course.image %>
-</p>
-
-<p>
-  <strong>Video:</strong>
-  <%= @course.video %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
-
-<p>
-  <strong>Star:</strong>
-  <%= @course.star %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col m4 center">
+              
+          </div>
+          <div class="col m8">
+          <span class="card-title"><%= @course.title %></span> <p><%= @course.description %></p>         
+        </div>
+       </div>
+      </div>
+ </div>
+</div>

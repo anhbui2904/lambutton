@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :xxxes
   resources :courses
   get 'pages/about'
   get 'pages/location'
